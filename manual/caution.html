@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- style -->
+  <link rel="stylesheet" type="text/css" href="src/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css" integrity="sha512-bm684OXnsiNuQSyrxuuwo4PHqr3OzxPpXyhT66DA/fhl73e1JmBxRKGnO/nRwWvOZxJLRCmNH7FII+Yn1JNPmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hi098123/prism-for-tistory/prism.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+  <title>조립 시 주의사항</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="title"> 
+      <a id="title-logo">XROBO WIKI : 조립 시 주의사항</a>
+    </div>
+    <div class="menu">
+      <a id="toc-open">목차</a>
+      <a id="toc-div">|</a>
+      <a id="toc-now"></a>
+    </div>
+  </nav>
+  
+  <ul id="toc">
+    <li><a id="toc-close" style="text-align:right">X</a></li>
+    <li class="level-H1">다른 매뉴얼 보기</li>
+    <li class="level-H4"><a href="https://xrobo11.github.io/wiki/manual/user.html" target="_blank">익스트림 안내서</a></li>
+    <li class="level-H4"><a href="https://xrobo11.github.io/wiki/manual/hardware.html" target="_blank">하드웨어</a></li>
+    <li class="level-H4"><a href="https://xrobo11.github.io/wiki/manual/software.html" target="_blank">소프트웨어</a></li>
+    <li class="level-H4"><a href="https://xrobo11.github.io/wiki/manual/codingblock.html" target="_blank">코딩블록</a></li>
+  </ul>
+
+  <div class="markdown-body">
+
+		
+
+
+
+
+    <h2 class="chapter">X1 단계</h2>
+
+    <h4 class="chapter">(1) 윈디</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 2번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>배터리케이스 밑판이 CPU보드와 마주보도록 조립 [✔️]</li>
+            <li>배터리케이스를 반대 방향으로 조립해도 로봇 동작에는 문제 없습니다</li>
+            <img src="img/caution/X1-1-2.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 3번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>배터리케이스에 90A를 연결할 때 배터리케이스 바깥쪽 홀 한 개에만 앵글 연결 [✔️]</li>
+            <img src="img/caution/X1-1-3.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 10번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>휠가이드를 DC모터에 연결할 때 휠가이드 뒷면이 DC모터를 향하도록 조립 [✔️]</li>
+            <li>휠가이드를 반대 방향으로 조립하는 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X1-1-10.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(2) 엑스휴먼</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 2번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>3X8F에 180A를 끼울 때 프레임 중앙보다 아래쪽에 앵글 연결 [✔️]</li>
+            <li>앵글을 프레임 중앙에 연결하는 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <li>2X3F 사용 [✔️]</li>
+            <li>2X4F를 사용하지 않도록 주의해주세요 [❌]</li>
+            <img src="img/caution/X1-2-2.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 3번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터 케이블이 위쪽을 향하도록 DC모터를 놓은 상태에서 프레임 조립 [✔️]</li>
+            <li>케이블 방향(DC모터 축 방향)이 잘못될 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <li>DC모터에 볼트를 끼울 때 안쪽 홀 두 개에 볼트 연결 [✔️]</li>
+            <li>바깥쪽 홀에 볼트를 연결할 경우, 바퀴 사이에 공간이 없어 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X1-2-3.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 12번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>CPU보드 윗면이 로봇 바깥쪽을 향하도록 조립 [✔️]</li>
+            <li>CPU보드를 반대로 연결할 경우, CPU보드에 선을 연결하기 어렵습니다[❌]</li>
+            <img src="img/caution/X1-2-12.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(3) 엑스쿠터</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 2번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>모터케이스 뒷면에 2X8F를 연결할 때 모터케이스 위쪽 홀에 볼트 연결 [✔️]</li>
+            <li>아래쪽 홀에 볼트를 끼우는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다[❌]</li>
+            <img src="img/caution/X1-3-2.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 6번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>모터케이스 뒷면에 2X8F를 연결할 때 모터케이스 위쪽 홀에 볼트 연결 [✔️]</li>
+            <li>아래쪽 홀에 볼트를 끼우는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다[❌]</li>
+            <img src="img/caution/X1-3-6.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 9번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>180A의 윗면(볼트가 있는 면)이 로봇 앞쪽을 향하도록 조립  [✔️]</li>
+            <li>180A를 뒤집어서 조립하는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다[❌]</li>
+            <img src="img/caution/X1-3-9.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(4) 건틀렛</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 12번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>휠가이드를 DC모터에 연결할 때 휠가이드 뒷면이 DC모터를 향하도록 조립 [✔️]</li>
+            <li>휠가이드를 반대 방향으로 조립하는 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X1-4-12.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(5) 쫑이</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 6번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>CPU보드 윗면이 DC모터가 있는 쪽을 향하게 조립 [✔️]</li>
+            <li>CPU보드를 반대 방향으로 조립해도 로봇 동작에는 문제 없습니다</li>
+            <img src="img/caution/X1-5-6.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 10번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>배터리케이스를 DC모터에 연결할 때 CPU보드와 가까운 쪽 홀에 배터리케이스 연결 [✔️]</li>
+            <li>배터리케이스를 다른쪽 홀에 연결해도 조립해도 로봇 동작에는 문제 없습니다</li>
+            <img src="img/caution/X1-5-10.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(6) 물방개</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 3번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2X8F에 연결된 DC모터의 축이 왼쪽을 향하도록 DC모터를 놓은 상태에서 프레임 조립 [✔️]</li>
+            <li>DC모터 축을 잘못된 방향으로 놓고 조립하는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다[❌]</li>
+            <img src="img/caution/X1-6-3.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 14번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>두 부품을 연결할 때 배터리케이스가 CPU보드와 겹치지 않도록 연결 [✔️]</li>
+            <li>배터리케이스가 CPU보드와 겹치게 연결할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X1-6-14.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(7) 이티</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 12번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>배터리케이스를 DC모터에 연결할 때 배터리케이스의 세번째 구멍에 볼트 조립 [✔️]</li>
+            <li>잘못된 홀에 볼트를 끼우는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X1-7-12.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 14번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2X6F를 DC모터에 연결할 때 180A가 연결된 쪽의 반대편 홀에 볼트 조립 [✔️]</li>
+            <li>2X6F를 잘못된 홀에 연결할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X1-7-14.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+
+    <h4 class="chapter">(8) 에프오</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 2번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터 케이블이 아래쪽을 향하도록 DC모터를 놓은 상태에서 조립 [✔️]</li>
+            <li>DC모터 축을 잘못된 방향으로 놓고 조립하는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다[❌]</li>
+            <li>2X2F 사용 [✔️]</li>
+            <li>2X3F를 사용하지 않도록 주의해주세요 [❌]</li>
+            <img src="img/caution/X1-8-2.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 4번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>6X8F에 부품을 연결할 때 부품의 180A가 아래쪽을 향하도록 조립 [✔️]</li>
+            <li>부품을 뒤집어 조립하는 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X1-8-4.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(9) 크래미</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 4번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>CPU보드의 앞면이 3X8F과 같은 쪽을 바라보도록 조립 [✔️]</li>
+            <li>반대로 조립하는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X1-9-4.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 11번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>배터리케이스에 2X8F을 연결할 때 앵글 사이에 90A가 오도록 조립 [✔️]</li>
+            <li>반대편에 조립하는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X1-9-11.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(10) 알씨</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 3번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터 케이블이 아래쪽을 향하도록 DC모터를 놓은 상태에서 조립 [✔️]</li>
+            <li>DC모터 축을 잘못된 방향으로 놓고 조립하는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다[❌]</li>
+            <img src="img/caution/X1-10-3.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 8번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>X-키패드에 3-PIN 케이블을 미리 연결한 후 조립 [✔️]</li>
+            <li>조립이 다 끝난 후에는 선을 연결하기 어렵습니다[❌]</li>
+            <img src="img/caution/X1-10-8.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(11) 닌자</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 3번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터 케이블이 바닥을 향하도록 DC모터를 놓은 상태에서 조립 [✔️]</li>
+            <li>DC모터 축을 잘못된 방향으로 놓고 조립하는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다[❌]</li>
+            <img src="img/caution/X1-11-3.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <h4 class="chapter">(12) 배트리</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 6번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>프레임 세 개 중 한 개는 3X8F 사용 [✔️]</li>
+            <li>2X8F 세 개를 사용하지 않도록 주의해주세요 [❌]</li>
+            <img src="img/caution/X1-12-6.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+
+    
+    
+    
+    <h2 class="chapter">X2 단계</h2>
+    
+    <h4 class="chapter">(1) 푸시</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 6번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2X3F 사용 [✔️]</li>
+            <li>2X4F를 사용하지 않도록 주의해주세요 [❌]</li>
+            <img src="img/caution/X2-1-6.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 창의력키우기 4번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2X6F를 연결할 때 로봇의 꼬리 부분(DC모터 축과 가까운 쪽)에 조립 [✔️]</li>
+            <li>반대편에 조립할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다[❌]</li>
+            <img src="img/caution/X2-1-E4.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(2) 왕눈이</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 4번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보모터의 스티커가 위쪽을 향하도록 조립 [✔️]</li>
+            <li>반대로 조립할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <li>DC모터 케이블이 없는 쪽에 서보모터 조립 [✔️]</li>
+            <li>반대쪽에 서보모터를 조립하는 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X2-2-4.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(3) 드로니</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 9번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보모터에 2X3F를 연결할 때 서보모터 축을 왼쪽으로 돌려놓은 상태에서 2X3F을 조립 [✔️]</li>
+            <li>서보모터 축이 반대로 돌아가 있는 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X2-3-9.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(4) 도토</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 5번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보모터의 스티커가 바깥쪽을 향하도록 조립 [✔️]</li>
+            <li>반대로 조립할 경우(서보모터의 스티커가 배터리케이스 쪽을 향하도록 조립한 경우), 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X2-4-5.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(5) 스노우</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 10번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보모터의 스티커가 위쪽을 향하도록 조립 [✔️]</li>
+            <li>반대로 조립할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <li>서보모터에 2X8F를 연결할 때 두 개의 2X8F 중 아래쪽 프레임에 볼트 조립 [✔️]</li>
+            <li>위쪽 프레임에 볼트를 조립할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X2-5-10.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 14번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'창의력키우기'를 할 경우 바퀴 조립하지 않음 [✔️]</li>
+            <li>바퀴가 조립한 경우, 남은 조립 과정에서 앵글을 조이기가 어려워 바퀴를 풀어줘야 합니다 [❌]</li>
+            <img src="img/caution/X2-5-14.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(6) 스완</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 4번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보모터의 스티커가 왼쪽을 향하도록 조립 [✔️]</li>
+            <li>반대로 조립할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <li>서보모터를 8X12F에 연결할 때 8X12F의 세번째 구멍에 볼트 조립 [✔️]</li>
+            <li>잘못된 홀에 볼트를 끼우는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X2-6-4.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 18번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'창의력키우기'를 할 경우 바퀴 조립하지 않음 [✔️]</li>
+            <li>바퀴가 조립한 경우, 남은 조립 과정에서 앵글을 조이기가 어려워 바퀴를 풀어줘야 합니다 [❌]</li>
+            <img src="img/caution/X2-6-18.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(7) 미니부스터</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 4번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터에 8X12F를 연결할 때 DC모터 케이블이 위쪽을 향하도록 DC모터를 놓은 상태에서 조립 서보모터의 스티커가 왼쪽을 향하도록 조립 [✔️]</li>
+            <li>축이 잘못 조립된 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X2-7-4.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 창의력키우기 7번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>LED에 3-PIN 케이블을 미리 연결한 후 조립 [✔️]</li>
+            <li>조립이 다 끝난 후에는 선을 연결하기 어렵습니다[❌]</li>
+            <img src="img/caution/X2-7-E7.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(8) 배틀-X2</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 3번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보모터의 스티커가 오른쪽을 향하도록 조립 [✔️]</li>
+            <li>반대로 조립할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X2-8-3.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(9) 엑스리자드</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 3번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보모터의 스티커가 왼쪽을 향하도록 조립 [✔️]</li>
+            <li>반대로 조립할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X2-9-3.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 12번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>부품을 6X8F에 연결할 때 부품을 '┌' 자로 놓은 상태에서 조립 [✔️]</li>
+            <li>부품을 뒤집어 조립하는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X2-9-12.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 13번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>부품을 6X8F에 연결할 때 부품을 'ㄱ' 자로 놓은 상태에서 조립 [✔️]</li>
+            <li>부품을 뒤집어 조립하는 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X2-9-13.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(10) 히포</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 6번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보모터 케이블이 DC모터 쪽을 향하도록 조립 [✔️]</li>
+            <li>서보모터 방향을 반대로 조립할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X2-10-6.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(11) 미니바이크</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 4번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2X4F를 조립할 때 DC모터 케이블이 없는 쪽 홀에 조립 [✔️]</li>
+            <li>DC모터 케이블이 있는 쪽에 조립할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X2-11-4.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 7번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>6X8F에 2X3F를 연결할 때 서보모터 케이블이 있는 쪽에 조립 [✔️]</li>
+            <li>서보모터 케이블이 없는 쪽에 프레임을 연결할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X2-11-7.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 19번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보모터 축에 2X4F를 연결할 때 서보모터 축을 중립으로 놓은 후 조립 (서보혼 옆면 중 튀어나와 있는 부분이 서보모터 위쪽을 향하도록 놓고 조립) [✔️]</li>
+            <li>축이 중립 상태가 아닐 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X2-11-19.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    
+    <h2 class="chapter">X3 단계</h2>
+    
+    <h4 class="chapter">(1) 라이플</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 5번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2X6F 사용 [✔️]</li>
+            <li>2X4F를 사용하지 않도록 주의해주세요 [❌]</li>
+            <img src="img/caution/X3-1-5.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 9번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>라이플 제일 끝의 90A에는 고무줄을 걸어주어야 하므로 볼트를 꽉 조이지 않음 [✔️]</li>
+            <li>고무줄이 잘 걸리지 않는다면 볼트를 더 풀어줍니다 [✔️]</li>
+            <img src="img/caution/X3-1-9.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 25번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>6X8F를 연결할 때 90A를 CPU보드 중앙과 2X4F(두 개 있음) 끝에 연결</li>
+            <li>잘못된 홀에 연결할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X3-1-25.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(2) 엑스버기</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 3번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2X3F 사용 [✔️]</li>
+            <li>2X4F를 사용하지 않도록 주의해주세요 [❌]</li>
+            <img src="img/caution/X3-2-2.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 4번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2X3F 사용 [✔️]</li>
+            <li>2X4F를 사용하지 않도록 주의해주세요 [❌]</li>
+            <li>서보혼에 2X3F를 조립할 때 서보혼의 위쪽 홀 2개와 2X3F의 끝에서 두번째 홀을 겹쳐놓은 후 볼트 조립 [✔️]</li>
+            <li>잘못된 홀에 볼트를 끼울 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X3-2-3.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(3) 땅강아지</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 11번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보혼에 반드시 볼트를 조립 [✔️]</li>
+            <li>서보혼에 볼트를 조립하지 않은 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X3-3-11.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(4) 피닉스</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 3번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>부품에 DC모터를 추가로 연결할 때 DC모터 케이블이 배터리케이스 쪽을 향하도록 DC모터를 조립 [✔️]</li>
+            <li>DC모터 케이블이 반대 방향을 향하도록 연결할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X3-4-3.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 8번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터에 서보혼을 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <li>서보혼에 축가이드를 연결할 때: 3X8볼트 [✔️] / 와셔볼트 [❌]</li>
+            <li>축가이드를 서보혼에 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <img src="img/caution/X3-4-8.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 12번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터에 서보혼을 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <li>서보혼에 축가이드를 연결할 때: 3X8볼트 [✔️] / 와셔볼트 [❌]</li>
+            <li>축가이드를 서보혼에 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <img src="img/caution/X3-4-12.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(5) 바이카</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 1번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터 스티커 쪽: 2X2F 연결 [✔️]</li>
+            <li>DC모터 케이블 쪽: 2X4F 연결 [✔️]</li>
+            <li>2X2F와 2X4F를 바꿔 조립하지 않도록 주의해주세요 [❌]</li>
+            <img src="img/caution/X3-5-1.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 13번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2X6F에 4X8F를 연결할 때 DC모터 케이블이 바닥면을 향하도록 DC모터 조립 [✔️]</li>
+            <li>DC모터를 반대로 연결할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X3-5-13.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(6) 불도저</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 특이사항 없음</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(7) 트레일러</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 3번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>8X12F에 서보혼을 연결할 때 DC모터 케이블이 없는 쪽에 조립 [✔️]</li>
+            <li>케이블이 있는 쪽에 연결할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X3-7-3.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 5번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>배터리케이스에 서보혼을 연결할 때 서보혼의 홀 4개 중 축가이드와 가까운 홀 2개에 볼트 조립 [✔️]</li>
+            <li>축가이드와 먼 쪽의 홀에 볼트를 연결할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X3-7-5.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(8) 킹콩</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 5번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>두 개의 배터리케이스가 같은 쪽에 있도록 프레임 조립 [✔️]</li>
+            <li>반대로 조립할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X3-8-5.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 14번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터에 서보혼을 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <li>서보혼에 축가이드를 연결할 때: 3X8볼트 [✔️] / 와셔볼트 [❌]</li>
+            <li>축가이드를 서보혼에 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <img src="img/caution/X3-8-14.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 20번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터에 서보혼을 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <li>서보혼에 축가이드를 연결할 때: 3X8볼트 [✔️] / 와셔볼트 [❌]</li>
+            <li>축가이드를 서보혼에 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <img src="img/caution/X3-8-20.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(9) 폭격기</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 4번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>배터리케이스를 DC모터에 연결할 때 DC모터 케이블이 없는 쪽에 볼트 조립 [✔️]</li>
+            <li>반대편에 조립할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X3-9-4.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(10) 배틀-X3</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 특이사항 없음</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    
+    <h2 class="chapter">X4 단계</h2>
+    
+    <h4 class="chapter">(1) 싸이클론</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 2번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터 케이블이 아래쪽을 향하도록 DC모터를 놓은 상태에서 프레임 조립 [✔️]</li>
+            <li>케이블 방향(DC모터 축 방향)이 잘못될 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X4-1-2.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(2) 바바리안</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 21번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>4X4F에 90A를 끼울 때 가장 왼쪽 홀 2개에 앵글 조립 [✔️]</li>
+            <li>4X4F의 중앙에 90A를 연결하는 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X4-2-21.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 22번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2X8F에 90A를 연결할 때 2X8F의 제일 끝에 있는 홀 한 개에만 앵글 연결 [✔️]</li>
+            <img src="img/caution/X4-2-22.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(3) 엑스그랩</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 2번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>8X12F에 DC모터를 연결할 때 DC모터의 앞면(축과 스티커가 있는 쪽)과 가까운 쪽의 홀 2개와 8X12F의 끝에서 두번째 홀을 겹쳐놓은 후 볼트 조립 [✔️]</li>
+            <li>잘못된 홀에 볼트를 끼울 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X4-3-2.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 8번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2X4F를 서보혼에 연결할 때 서보혼이 2X4F의 중앙보다 살짝 오른쪽에 위치하도록 볼트 조립 [✔️]</li>
+            <li>2X4F의 정중앙에 서보혼을 연결할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X4-3-8.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(4) 타란튤라</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 5번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터에 서보혼을 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <li>서보혼에 축가이드를 연결할 때: 3X8볼트 [✔️] / 와셔볼트 [❌]</li>
+            <li>축가이드를 서보혼에 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <img src="img/caution/X4-4-5.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 17번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터에 서보혼을 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <li>서보혼에 축가이드를 연결할 때: 3X8볼트 [✔️] / 와셔볼트 [❌]</li>
+            <li>축가이드를 서보혼에 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <img src="img/caution/X4-4-17.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 40번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>고무줄 사용 [✔️]</li>
+            <li>고무줄은 2개 이상 사용해도 좋습니다 [✔️]</li>
+            <li>고무줄을 끼우지 않을 경우, 마찰력이 부족해 타란튤라 로봇이 움직이지 않습니다 [❌]</li>
+            <img src="img/caution/X4-4-40.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(5) 배틀-X4</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 1번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>8X12F에 DC모터를 연결할 때 DC모터의 앞면(축과 스티커가 있는 쪽)과 가까운 쪽의 홀 2개에 볼트 조립 [✔️]</li>
+            <li>반대편에 조립할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X4-5-1.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 2번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>8X12F에 DC모터를 연결할 때 DC모터의 앞면(축과 스티커가 있는 쪽)과 가까운 쪽의 홀 2개에 볼트 조립 [✔️]</li>
+            <li>반대편에 조립할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X4-5-2.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(6) 엘리게이터</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 16번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터에 서보혼을 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <li>서보혼에 축가이드를 연결할 때: 3X8볼트 [✔️] / 와셔볼트 [❌]</li>
+            <li>축가이드를 서보혼에 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <img src="img/caution/X4-6-16.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 22번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터에 서보혼을 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <li>서보혼에 축가이드를 연결할 때: 3X8볼트 [✔️] / 와셔볼트 [❌]</li>
+            <li>축가이드를 서보혼에 연결할 때: 와셔볼트 [✔️] / 3X8볼트 [❌]</li>
+            <img src="img/caution/X4-6-22.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(7) 오프로더</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 2번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>프레임에 DC모터를 연결할 때: 3X15볼트 (긴 볼트) [✔️] / 3X8볼트 (짧은 볼트) [❌]</li>
+            <li>3X15 볼트가 끝까지 조여지지 않는 것은 정상입니다 [✔️]</li>
+            <li>볼트를 조였더라도 DC모터가 좌우로 움직여야 합니다 [✔️]</li>
+            <li>볼트를 조였을 때 DC모터가 꽉 고정되어 움직이지 않는 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X4-7-2.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 6번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>프레임에 DC모터를 연결할 때: 3X15볼트 (긴 볼트) [✔️] / 3X8볼트 (짧은 볼트) [❌]</li>
+            <li>3X15 볼트가 끝까지 조여지지 않는 것은 정상입니다 [✔️]</li>
+            <li>볼트를 조였더라도 DC모터가 좌우로 움직여야 합니다 [✔️]</li>
+            <li>볼트를 조였을 때 DC모터가 꽉 고정되어 움직이지 않는 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X4-7-6.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(8) 서브머신</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 특이사항 없음</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>조립 난이도가 높은 편입니다</li>
+
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    
+    <h2 class="chapter">X5 단계</h2>
+    
+    <h4 class="chapter">(1) 윌리</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 특이사항 없음</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(2) X-벤틀리</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 특이사항 없음</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(3) 트윈롤링</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 창의력키우기 12번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>탄성이 괜찮은 고무줄 사용 [✔️]</li>
+            <li>고무줄은 2개 이상 사용해도 좋습니다 [✔️]</li>
+            <li>고무줄의 탄성이 부족할 경우, 서보모터를 작동시켜도 부품이 제대로 움직이지 않습니다 [❌]</li>
+            <img src="img/caution/X5-3-E12.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 선 연결</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2-PIN 케이블 두 개를 2-PIN 헤더핀을 사용하여 연장할 때 같은 색 선끼리 이어지도록 케이블 연결 [✔️]</li>
+            <li>반대로 연결될 경우, 로봇 동작에 문제는 없으나 DC모터가 의도한 것과 반대로 회전하게 됩니다 [❌]</li>
+            <img src="img/caution/X5-3-LINE.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(4) 사이보그 바이크</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 1번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터 스티커 쪽: 2X2F 연결 [✔️]</li>
+            <li>DC모터 케이블 쪽: 2X4F 연결 [✔️]</li>
+            <li>2X2F와 2X4F를 바꿔 조립하지 않도록 주의해주세요 [❌]</li>
+            <img src="img/caution/X5-4-1.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 19번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>DC모터 스티커 쪽: 2X2F 연결 [✔️]</li>
+            <li>DC모터 케이블 쪽: 2X4F 연결 [✔️]</li>
+            <li>2X2F와 2X4F를 바꿔 조립하지 않도록 주의해주세요 [❌]</li>
+            <img src="img/caution/X5-4-19.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 선 연결</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2-PIN 케이블 두 개를 2-PIN 헤더핀을 사용하여 연장할 때 같은 색 선끼리 이어지도록 케이블 연결 [✔️]</li>
+            <li>반대로 연결될 경우, 로봇 동작에 문제는 없으나 DC모터가 의도한 것과 반대로 회전하게 됩니다 [❌]</li>
+            <img src="img/caution/X5-4-LINE.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(5) 배틀-X5</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 특이사항 없음</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(6) 메가티라노</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 선 연결</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>3-PIN 케이블 두 개를 3-PIN 헤더핀을 사용하여 연장할 때 같은 색 선끼리 이어지도록 케이블 연결 [✔️]</li>
+            <li>반대로 연결될 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X5-6-LINE.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    
+    <h2 class="chapter">X6 단계</h2>
+    
+    <h4 class="chapter">(1) 리버스</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 특이사항 없음</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(2) 배틀-X6</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 특이사항 없음</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(3) 옵티머스</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 44번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>180A의 윗면(볼트가 있는 면)이 로봇 뒤쪽을 향하도록 조립 [✔️]</li>
+            <li>윗면 아랫면을 반대로 조립할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X6-3-44.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 48번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>180A의 윗면(볼트가 있는 면)이 로봇 뒤쪽을 향하도록 조립 [✔️]</li>
+            <li>윗면 아랫면을 반대로 조립할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X6-3-48.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 선 연결</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2-PIN 케이블 두 개를 2-PIN 헤더핀을 사용하여 연장할 때 같은 색 선끼리 이어지도록 케이블 연결 [✔️]</li>
+            <li>반대로 연결될 경우, 로봇 동작에 문제는 없으나 DC모터가 의도한 것과 반대로 회전하게 됩니다 [❌]</li>
+            <img src="img/caution/X6-3-LINE.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(4) 엑스부스터</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 36번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>LED에 3-PIN 케이블을 미리 연결한 후 조립 [✔️]</li>
+            <li>조립이 다 끝난 후에는 선을 연결하기 어렵습니다 [❌]</li>
+            <li>LED를 사용하지 않을 경우 선을 연결하지 않아도 됩니다 [✔️]</li>
+            <img src="img/caution/X6-4-36-1.png" style="width: 400px;">
+            <img src="img/caution/X6-4-36-2.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 창의력키우기 15번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>LED에 3-PIN 케이블을 미리 연결한 후 조립 [✔️]</li>
+            <li>조립이 다 끝난 후에는 선을 연결하기 어렵습니다 [❌]</li>
+            <li>LED를 사용하지 않을 경우 선을 연결하지 않아도 됩니다 [✔️]</li>
+            <img src="img/caution/X6-4-E15.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(5) 몬스터</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 33번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>프레임에 배터리케이스를 연결할 때 서보모터 스티커가 보이는 쪽(로봇 앞쪽)에 조립 [✔️]</li>
+            <li>서보모터 스티커가 보이지 않는 쪽(로봇 뒤쪽)에 조립할 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/X6-5-33.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 43번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>고무줄을 반드시 걸어주어야 함 [✔️]</li>
+            <li>로봇의 몸체가 무겁기 때문에 서보모터의 힘만으로는 로봇 몸체를 들어올릴 수가 없으므로 고무줄을 걸어주지 않는 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/X6-5-43.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(6) 바이크론</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 선 연결</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>2-PIN 케이블 두 개를 2-PIN 헤더핀을 사용하여 연장할 때 같은 색 선끼리 이어지도록 케이블 연결 [✔️]</li>
+            <li>반대로 연결될 경우, 로봇 동작에 문제는 없으나 DC모터가 의도한 것과 반대로 회전하게 됩니다 [❌]</li>
+            <img src="img/caution/X6-6-LINE.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    
+    <h2 class="chapter">XB 단계</h2>
+    
+    <h4 class="chapter">(1) 엑스파이터</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(2) 건틀렛'과 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 17번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보혼에 2X3F를 조립할 때 2X3F의 끝에서 세번째, 네번째 홀에 볼트 조립 [✔️]</li>
+            <li>잘못된 홀에 볼트를 끼울 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/XB-1-17.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 22번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>서보혼에 2X3F를 조립할 때 2X3F의 끝에서 세번째, 네번째 홀에 볼트 조립 [✔️]</li>
+            <li>잘못된 홀에 볼트를 끼울 경우, 남은 조립 과정에서 문제가 생길 수 있습니다 [❌]</li>
+            <img src="img/caution/XB-1-22.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(2) 건틀렛</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(1) 엑스파이터'와 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(3) 콤비네이션 F</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(4) 콤비네이션 R'과 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(4) 콤비네이션 R</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(3) 콤비네이션 F'과 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(5) 롤링카</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(6) 핸드슈트'와 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(6) 핸드슈트</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(5) 롤링카'와 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 15번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>자이로 센서를 조립할 때는 X 화살표가 왼쪽을, Y 화살표가 아래쪽을 가리키도록 조립 [✔️]</li>
+            <li>자이로 센서의 특성 상 X축과 Y축 기울기를 따로 감지하기 때문에 자이로 센서의 방향을 바꾸어 조립할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/XB-6-15.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(7) F1</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(8) 스페이스 핸들'과 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(8) 스페이스 핸들</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(7) F1'과 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 8번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>접촉센서에 3-PIN 케이블을 미리 연결한 후 조립 [✔️]</li>
+            <li>접촉센서에 3-PIN 케이블을 연결할 때 접촉센서에 있는 두 개의 핀 중 위쪽에 있는 핀에 연결 [✔️]</li>
+            <li>조립이 다 끝난 후에는 선을 연결하기 어렵습니다 [❌]</li>
+            <img src="img/caution/XB-8-8.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 19번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>접촉센서에 3-PIN 케이블을 미리 연결한 후 조립 [✔️]</li>
+            <li>접촉센서에 3-PIN 케이블을 연결할 때 접촉센서에 있는 두 개의 핀 중 위쪽에 있는 핀에 연결 [✔️]</li>
+            <li>조립이 다 끝난 후에는 선을 연결하기 어렵습니다 [❌]</li>
+            <img src="img/caution/XB-8-19.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 25번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>자이로 센서를 조립할 때는 X 화살표가 오른쪽을, Y 화살표가 하늘쪽을 가리키도록 조립 [✔️]</li>
+            <li>자이로 센서의 특성 상 X축과 Y축 기울기를 따로 감지하기 때문에 자이로 센서의 방향을 바꾸어 조립할 경우, 로봇이 제대로 동작하지 않습니다 [❌]</li>
+            <img src="img/caution/XB-8-25.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(9) 인터셉터</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(10) 캐리어머신'과 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(10) 캐리어머신</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(9) 인터셉터'와 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(11) ATV</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(12) 듀얼키패드'와 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+    
+    
+    <h4 class="chapter">(12) 듀얼키패드</h4>
+    <div class="content">
+      <aside class="callout">
+        <div class="callout-title">⚠️ 공통 설명</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>'(9) 인터셉터'와 세트입니다.</li>
+          </ul>
+        </div>
+      </aside>
+      <aside class="callout">
+        <div class="callout-title">⚠️ 1번</div>
+        <div class="callout-content">
+          <ul class="callout-list">
+            <li>X-키패드에 3-PIN 케이블을 미리 연결한 후 조립 [✔️]</li>
+            <li>조립이 다 끝난 후에는 선을 연결하기 어렵습니다 [❌]</li>
+            <img src="img/caution/XB-12-1.png" style="width: 400px;">
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+
+
+	</div>
+
+	<script src="src/script.js"></script>
+	
+	</body>
+	</html>

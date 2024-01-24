@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- style -->
+  <link rel="stylesheet" type="text/css" href="src/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css" integrity="sha512-bm684OXnsiNuQSyrxuuwo4PHqr3OzxPpXyhT66DA/fhl73e1JmBxRKGnO/nRwWvOZxJLRCmNH7FII+Yn1JNPmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hi098123/prism-for-tistory/prism.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+  <title>코딩블록 매뉴얼</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="title"> 
+      <a id="title-logo">XROBO WIKI : 코딩블록</a>
+    </div>
+    <div class="menu">
+      <a id="toc-open">목차</a>
+      <a id="toc-div">|</a>
+      <a id="toc-now"></a>
+    </div>
+  </nav>
+  
+  <ul id="toc">
+    <li><a id="toc-close" style="text-align:right">X</a></li>
+    <li class="level-H1">다른 매뉴얼 보기</li>
+    <li class="level-H4"><a href="https://xrobo11.github.io/wiki/manual/user.html" target="_blank">익스트림 안내서</a></li>
+    <li class="level-H4"><a href="https://xrobo11.github.io/wiki/manual/caution.html" target="_blank">조립 시 주의사항</a></li>
+    <li class="level-H4"><a href="https://xrobo11.github.io/wiki/manual/hardware.html" target="_blank">하드웨어</a></li>
+    <li class="level-H4"><a href="https://xrobo11.github.io/wiki/manual/software.html" target="_blank">소프트웨어</a></li>
+  </ul>
+
+  <div class="markdown-body">
+    
+    <h2 class="chapter">블록 살펴보기</h2>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이벤트 블록</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>코드의 시작이자 코드가 실행되어야 하는 경우를 알려주는 블록이에요.</li>
+          <li>XROBO에선 이벤트 블록이 'CPU보드의 시작 버튼이 눌리다'라서 시작 버튼이 눌리면 CPU가 이벤트 블록 아래의 코드를 실행합니다.</li>
+          <li>스크래치에선 코드의 시작이 되는 블록이라 '시작 블록'이라 부르거나 모자처럼 생겼다고 해서 'Hat Block'이라 불러요.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 실행 블록</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>CPU에게 작업을 시킬 수 있는 블록이에요.</li>
+          <li>실행 블록 중엔 LED 켜기, DC모터 속도 설정, 서보모터 각도 조절 등의 작업을 할 수 있는 블록들이 있어요.</li>
+          <li>스크래치에선 '시작 블록' 뒤에 쌓을 수 있다고 하여 '쌓기 블록(Stack Block)'이라 불러요.</li>
+          <li>팔이 있는 블록와 팔이 없는 블록이 있어요.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 값 블록</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li><code>참/거짓</code>, <code>수</code>, <code>문자</code> 등의 '값'이 들어있는 블록이에요.</li>
+          <li><code>참/거짓</code> 블록은 뾰족한 육각형, <code>수</code> 블록과 <code>문자</code> 블록은 둥근 원통 모양이에요.</li>
+          <li>이 블록들의 값은 코드를 실행하던 중에 바뀔 수도 있는데, 이 값에 따라 다른 블록을 실행하도록 할 수도 있어서 값 블록은 주로 '만약 블록'의 '조건'으로 쓰여요.</li>
+          <li>스크래치에선 '참/거짓' 블록을 '논리 블록(Boolean Block)'으로, '수'나 '문자' 블록을 '반환 블록(Reporter Block)'으로 불러요.</li>
+        </ul>
+      </div>
+    </aside>
+
+
+
+
+    <h2 class="chapter">1. 이벤트</h2>
+
+    <h3 class="chapter">이벤트 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>코드의 시작이자, CPU에게 코드를 실행해야 될 때를 알려주는 '이벤트' 블록이에요.</li>
+          <li>XROBO 로봇을 시작할 때 사용하는 코딩블록이에요.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>XROBO 로봇을 코딩하고 싶을 때면 항상 필요해요.</li>
+          <li>이벤트 블록이 없으면 로봇이 움직이지 않아요.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <h4 class="chapter">시작하기</h4>
+    <div class="content">
+      <img src="img/codingblock/event-start.png" alt="">
+      <p>로봇을 시작시키면 이벤트 블록에 붙어있는 코드가 차례대로 한줄씩 실행됩니다.</p>
+      <details><summary>로봇 시작 옵션 선택하기</summary>
+        <div class="details-content">
+          <ul>
+            <li><code>RF AUTO</code>: CPU보드의 START 버튼을 누르면 코드가 실행됩니다. 리모컨을 사용할 수 있는 옵션입니다.</li>
+            <li><code>방송하기</code>: ??</li>
+            <li><code>스쿨모드</code>: CPU보드의 START 버튼을 누르면 코드가 실행됩니다. 리모컨을 사용할 수 있는 옵션입니다.</li>
+            <li><code>바로 시작</code>: CPU보드의 전원을 켜면 바로 코드가 실행됩니다. 리모컨을 사용할 수 있는 옵션입니다.</li>
+            <li><code>웨어러블</code>: CPU보드의 START 버튼을 누르면 코드가 실행됩니다. 웨어러블 장치를 제어할 때 사용하는 옵션입니다.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+
+
+
+
+    <h2 class="chapter">2. 출력</h2>
+
+    <h3 class="chapter">멜로디 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>주어진 작업을 실행하는 '실행' 블록이에요.</li>
+          <li>CPU보드에 붙어있는 부저를 작동시켜 '소리'를 낼 때 사용하는 코딩 블록이에요.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>빵빵거리는 경적 소리를 내고 싶을 때</li>
+          <li>사이렌 소리를 내고 싶을 때</li>
+          <li>음악을 연주하고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+
+    <h4 class="chapter">멜로디 음높이</h4>
+    <div class="content">
+      <img src="img/codingblock/output-meldoy-pitch.png" alt="멜로디 음높이 블록의 이미지">
+      <p>선택한 &#39;음높이&#39;가 선택한 &#39;소리시간&#39;만큼 연주됩니다.</p>
+      <details><summary>음높이 선택하기</summary>
+        <div class="details-content">
+          <code>도4</code>~<code>도6</code> 사이의 계이름을 선택할 수 있습니다.
+        </div>
+      </details> 
+      <details><summary>소리시간 선택하기</summary>
+        <div class="details-content">
+          입력한 시간만큼 음높이가 재생됩니다. (1000=1초. 500은 0.5초입니다.)
+        </div>
+      </details> 
+      <details><summary>대기시간 선택하기</summary>
+        <div class="details-content">
+          블록이 실행되는 총 시간으로, 소리가 연주되고 쉬는 시간까지 포함된 시간입니다. 소리시간보다 크거나 소리시간과 같아야 하며, 500만큼 연주하고 500만큼 쉬고 싶다면 소리시간은 500, 대기시간은 1000이 되어야 합니다. (1000=1초. 500은 0.5초입니다.)
+        </div>
+      </details>     
+    </div>
+    <h4 class="chapter">멜로디 주파수</h4>
+    <div class="content">
+      <img src="img/codingblock/output-meldoy-frequency.png" alt="멜로디 주파수 블록의 이미지">
+      <p>선택한 &#39;주파수&#39;가 선택한 &#39;소리시간&#39;만큼 연주됩니다.</p>
+      
+      <details><summary>주파수 선택하기</summary>
+        <div class="details-content">
+          <code>0</code>~<code>1050</code> 사이의 주파수를 입력할 수 있습니다. &#39;음높이 (계이름)' 또는 '음높이 (계이름 번호)&#39; 블록을 넣어서 사용할 수도 있습니다.
+          <div>추천 주파수</div>
+          <table>
+            <thead>
+              <tr><th>계이름</th><th>주파수</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>도4</td><td>262</td></tr>
+              <tr><td>레4</td><td>294</td></tr>
+              <tr><td>미4</td><td>330</td></tr>
+              <tr><td>파4</td><td>349</td></tr>
+              <tr><td>솔4</td><td>392</td></tr>
+              <tr><td>라4</td><td>440</td></tr>
+              <tr><td>시4</td><td>494</td></tr>
+              <tr><td>도5</td><td>523</td></tr>
+              <tr><td>레5</td><td>587</td></tr>
+              <tr><td>미5</td><td>659</td></tr>
+              <tr><td>파5</td><td>698</td></tr>
+              <tr><td>솔5</td><td>784</td></tr>
+              <tr><td>라5</td><td>880</td></tr>
+              <tr><td>시5</td><td>988</td></tr>
+              <tr><td>도6</td><td>1047</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details> 
+      <details><summary>소리시간 선택하기</summary>
+        <div class="details-content">
+          입력한 시간만큼 음높이가 재생됩니다. (1000=1초. 500은 0.5초입니다.)
+        </div>
+      </details> 
+      <details><summary>대기시간 선택하기</summary>
+        <div class="details-content">
+          블록이 실행되는 총 시간으로, 소리가 연주되고 쉬는 시간까지 포함된 시간입니다. 소리시간보다 크거나 소리시간과 같아야 하며, 500만큼 연주하고 500만큼 쉬고 싶다면 소리시간은 500, 대기시간은 1000이 되어야 합니다. (1000=1초. 500은 0.5초입니다.)
+        </div>
+      </details>        
+    </div>
+
+    <h4 class="chapter">음높이 (계이름)</h4>
+    <div class="content">
+      <img src="img/codingblock/output-meldoy-pitch-syllable.png" alt="음높이 (계이름) 블록의 이미지">
+      <p>선택한 &#39;음높이 (계이름)&#39;을 주파수로 바꾸어주는 블록입니다. &#39;멜로디 주파수&#39; 블록의 입력 상자에 넣어서 사용합니다.</p>
+      <details><summary>음높이 선택하기</summary>
+        <div class="details-content">
+          <code>도4</code>~<code>도6</code> 사이의 계이름을 선택할 수 있습니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">음높이 (계이름 번호)</h4>
+    <div class="content">
+      <img src="img/codingblock/output-meldoy-pitch-number.png" alt="음높이 (계이름 번호번호) 블록의 이미지">
+      <p>입력한 &#39;음높이 (계이름 번호)&#39;을 주파수로 바꾸어주는 블록입니다. &#39;멜로디 주파수&#39; 블록의 입력 상자에 넣어서 사용합니다.</p>
+      <details><summary>음높이 선택하기</summary>
+        <div class="details-content">
+          <code>1</code>~<code>15</code> 사이의 계이름 번호를 선택할 수 있습니다.
+          <table>
+            <thead>
+              <tr><th>계이름 번호</th><th>계이름</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>도4</td></tr>
+              <tr><td>2</td><td>레4</td></tr>
+              <tr><td>3</td><td>미4</td></tr>
+              <tr><td>4</td><td>파4</td></tr>
+              <tr><td>5</td><td>솔4</td></tr>
+              <tr><td>6</td><td>라4</td></tr>
+              <tr><td>7</td><td>시4</td></tr>
+              <tr><td>8</td><td>도5</td></tr>
+              <tr><td>9</td><td>레5</td></tr>
+              <tr><td>10</td><td>미5</td></tr>
+              <tr><td>11</td><td>파5</td></tr>
+              <tr><td>12</td><td>솔5</td></tr>
+              <tr><td>13</td><td>라5</td></tr>
+              <tr><td>14</td><td>시5</td></tr>
+              <tr><td>15</td><td>도6</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+
+
+    <h3 class="chapter">LED 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>주어진 작업을 실행하는 '실행' 블록이에요.</li>
+          <li>기본 LED와 CPU보드 LED를 작동시켜 '불빛'을 켜거나 끌 때 사용하는 코딩블록이에요.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>자동차 로봇의 전조등 불을 켜고 싶을 때</li>
+          <li>로봇의 눈에서 빛이 나게 하고 싶을 때</li>
+          <li>불을 켜서 풍차 날개를 반짝이게 하고 싶을 때</li>
+          <li>CPU보드의 불빛을 숨쉬는 것처럼 깜박이고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+
+    <h4 class="chapter">LED 온오프</h4>
+    <div class="content">
+      <img src="img/codingblock/output-led-out-on.png" alt="">
+      <p>선택한 LED가 켜거나 꺼집니다.</p>
+      <details><summary>제어할 LED 선택하기</summary>
+        <div class="details-content">
+          <code>OUT1</code>~<code>OUT8</code>을 선택하면 CPU보드의 OUT포트에 연결된 기본 LED가, <code>CPU</code>를 선택하면 CPU보드 LED가 제어됩니다.
+        </div>
+      </details>
+      <details><summary>LED 켜고 끄기</summary>
+        <div class="details-content">
+          <code>ON</code>을 선택하면 앞서 선택한 LED가 켜지고, <code>OFF</code>를 선택하면 LED가 꺼집니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">LED 밝기</h4>
+    <div class="content">
+      <img src="img/codingblock/output-led-bright.png" alt="">
+      <p>선택한 LED가 선택한 밝기로 켜집니다(끌 수도 있습니다.)</p>
+      <details><summary>제어할 LED 선택하기</summary>
+        <div class="details-content">
+          <code>OUT1</code>~<code>OUT8</code>을 선택하면 CPU보드의 OUT포트에 연결된 기본 LED가, <code>CPU</code>를 선택하면 CPU보드 LED가 제어됩니다.
+        </div>
+      </details>
+      <details><summary>밝기 선택하기</summary>
+        <div class="details-content">
+          높은 수를 선택할수록 LED가 밝게 켜집니다. <code>1</code>~<code>19</code> 사이의 수를 입력할 수 있으며, <code>0</code>을 선택하면 LED가 꺼지고, <code>숨쉬기</code>를 선택하면 LED가 숨쉬듯 깜박입니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">LED 숨쉬기 속도</h4>
+    <div class="content">
+      <img src="img/codingblock/output-led-breathing.png" alt="">
+      <p>선택한 LED가 선택한 속도로 숨쉬기 합니다(깜박입니다).</p>
+      <details><summary>속도 선택하기</summary>
+        <div class="details-content">
+          높은 수를 선택할수록 LED가 밝게 켜집니다. <code>1</code>~<code>19</code> 사이의 수를 입력할 수 있으며, <code>0</code>을 선택하면 LED가 꺼지고, <code>숨쉬기</code>를 선택하면 LED가 숨쉬듯 깜박입니다.
+        </div>
+      </details>
+    </div>
+
+
+
+    <h3 class="chapter">서보모터 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>주어진 작업을 실행하는 '실행' 블록이에요.</li>
+          <li>서보모터의 축을 움직여 특정 각도로 만들고 싶을 때 사용하는 코딩블록이에요.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>서보모터에 연결된 집게발을 움직이고 싶을 때</li>
+          <li>배틀 로봇의 앞판을 들어올리고 싶을 때</li>
+          <li>서보모터 조향 장치가 있는 자동차 로봇의 방향을 바꾸고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+    
+    <h4 class="chapter">서보모터 각도</h4>
+    <div class="content">
+      <img src="img/codingblock/output-servo-pulldown.png" alt="">
+      <img src="img/codingblock/output-servo.png" alt="">
+      <p>선택한 OUT포트에 연결된 서보모터 축이 선택한 각도로 움직입니다.</p>
+      <details><summary>제어할 서보모터 선택하기</summary>
+        <div class="details-content">
+          <code>OUT1</code>~<code>OUT8</code> 중 하나를 선택하면 해당 OUT포트에 연결된 서보모터가 제어됩니다.
+        </div>
+      </details>
+      <details><summary>각도 선택하기</summary>
+        <div class="details-content">
+          <code>0</code>~<code>180</code> 사이의 각도를 선택할 수 있습니다.
+        </div>
+      </details>
+    </div>
+
+
+
+
+
+    <h2 class="chapter">3. 모터</h2>
+
+    <h3 class="chapter">DC모터 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>주어진 작업을 실행하는 '실행' 블록이에요.</li>
+          <li>DC모터를 작동시키고 싶을 때 사용하는 코딩블록이에요.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>자동차 로봇을 조종하고 싶을 때</li>
+          <li>킹콩이나 스완 로봇의 어깨 또는 목 관절을 움직이고 싶을 때</li>
+          <li>배틀에서 DC모터 축에 연결된 무기를 회전시키고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+
+    <h4 class="chapter">모터 M1, M2 (시간)</h4>
+    <div class="content">
+      <img src="img/codingblock/motor-12-time-pulldown.png" alt="">
+      <img src="img/codingblock/motor-12-time.png" alt="">
+      <p>M1과 M2 포트에 연결된 DC모터가 선택한 속도로 선택한 시간만큼 동시에 회전합니다.</p>
+      <details><summary>제어할 DC모터 선택하기</summary>
+        <div class="details-content">
+          <ul>
+            <li>M1 포트에 연결된 DC모터: 블록에서 <code>M1</code> 입력 상자에 들어가는 속도를 바꾸어 제어합니다.</li>
+            <li>M2 포트에 연결된 DC모터: 블록에서 <code>M2</code> 입력 상자에 들어가는 속도를 바꾸어 제어합니다.</li>
+          </ul>
+        </div>
+      </details>
+      <details><summary>속도 선택하기</summary>
+        <div class="details-content">
+          <ol>
+            <li><code>0</code>을 선택한 경우: DC모터가 움직이지 않습니다. 정지해있습니다.</li>
+            <li><code>0</code>보다 큰 수를 선택한 경우(<code>1</code>~<code>20</code>): DC모터가 회전합니다. 숫자가 클수록 빠르게 회전합니다.</li>
+            <li><code>0</code>보다 작은 수를 선택한 경우(<code>-1</code>~<code>-20</code>): DC모터가 회전하지만, 2번 경우와 반대 방향으로 회전합니다. 숫자가 클수록 빠르게 회전합니다.</li>
+          </ol>
+          모터 하나만 움직이고 싶다면 멈춰두고 싶은 모터의 속도를 <code>0</code>으로 설정합니다.
+        </div>
+      </details>
+      <details><summary>자동차 로봇을 움직이려 한다면</summary>
+        <div class="details-content">
+          M1, M2 포트에 연결할 DC모터를 바퀴로 쓸 예정이라면 이렇게 연결합니다.
+          <ul>
+            <li>왼쪽 바퀴: M1 포트</li>
+            <li>오른쪽 바퀴: M2 포트</li>
+          </ul>
+          속도는 이렇게 설정합니다.
+          <ul>
+            <li>전진: 두 바퀴의 속도가 같아야 합니다. <code>1</code>~<code>20</code> 중 하나를 입력합니다.</li>
+            <li>후진: 두 바퀴의 속도가 같아야 합니다. <code>-1</code>~<code>-20</code> 중 하나를 입력합니다.</li>
+            <li>좌회전: 왼쪽 바퀴의 속도가 오른쪽보다 느려야 합니다.</li>
+            <li>우회전: 오른쪽 바퀴의 속도가 왼쪽보다 느려야 합니다.</li>
+          </ul>
+          모터가 일정 시간 동작 후 알아서 멈추기 때문에 따로 정지시켜줄 필요가 없습니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">모터 M1, M2 (속도 설정)</h4>
+    <div class="content">
+      <img src="img/codingblock/motor-12-speed-pulldown.png" alt="">
+      <img src="img/codingblock/motor-12-speed.png" alt="">
+      <p>M1과 M2 포트에 연결된 DC모터가 선택한 속도로 회전합니다. 따로 속도를 바꾸어줄 때까지 계속 그 속도로 회전합니다.</p>
+      <details><summary>제어할 DC모터 선택하기</summary>
+        <div class="details-content">
+          <ul>
+            <li>M1 포트에 연결된 DC모터: 블록에서 <code>M1</code> 입력 상자에 들어가는 속도를 바꾸어 제어합니다.</li>
+            <li>M2 포트에 연결된 DC모터: 블록에서 <code>M2</code> 입력 상자에 들어가는 속도를 바꾸어 제어합니다.</li>
+          </ul>
+        </div>
+      </details>
+      <details><summary>속도 선택하기</summary>
+        <div class="details-content">
+          <ol>
+            <li><code>0</code>을 선택한 경우: DC모터가 움직이지 않습니다. 정지해있습니다.</li>
+            <li><code>0</code>보다 큰 수를 선택한 경우(<code>1</code>~<code>20</code>): DC모터가 회전합니다. 숫자가 클수록 빠르게 회전합니다.</li>
+            <li><code>0</code>보다 작은 수를 선택한 경우(<code>-1</code>~<code>-20</code>): DC모터가 회전하지만, 2번 경우와 반대 방향으로 회전합니다. 숫자가 클수록 빠르게 회전합니다.</li>
+          </ol>
+          모터 하나만 움직이고 싶다면 멈춰두고 싶은 모터의 속도를 <code>0</code>으로 설정합니다.
+        </div>
+      </details>
+      <details><summary>자동차 바퀴를 움직이려 한다면</summary>
+        <div class="details-content">
+          M1, M2 포트에 연결할 DC모터를 바퀴로 쓸 예정이라면 이렇게 연결합니다.
+          <ul>
+            <li>왼쪽 바퀴: M1 포트</li>
+            <li>오른쪽 바퀴: M2 포트</li>
+          </ul>
+          속도는 이렇게 설정합니다.
+          <ul>
+            <li>전진: 두 바퀴의 속도가 같아야 합니다. <code>1</code>~<code>20</code> 중 하나를 입력합니다.</li>
+            <li>후진: 두 바퀴의 속도가 같아야 합니다. <code>-1</code>~<code>-20</code> 중 하나를 입력합니다.</li>
+            <li>좌회전: 왼쪽 바퀴의 속도가 오른쪽보다 느려야 합니다.</li>
+            <li>우회전: 오른쪽 바퀴의 속도가 왼쪽보다 느려야 합니다.</li>
+            <li>정지: 두 바퀴의 속도를 <code>0</code>으로 설정해야 합니다.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">모터 M3, M4 (시간)</h4>
+    <div class="content">
+      <img src="img/codingblock/motor-34-time-pulldown.png" alt="">
+      <img src="img/codingblock/motor-34-time.png" alt="">
+      <p>M3과 M4 포트에 연결된 DC모터가 선택한 속도로 선택한 시간만큼 동시에 회전합니다.</p>
+      <details><summary>제어할 DC모터 선택하기</summary>
+        <div class="details-content">
+          <ul>
+            <li>M3 포트에 연결된 DC모터: 블록에서 <code>M3</code> 입력 상자에 들어가는 속도를 바꾸어 제어합니다.</li>
+            <li>M4 포트에 연결된 DC모터: 블록에서 <code>M4</code> 입력 상자에 들어가는 속도를 바꾸어 제어합니다.</li>
+          </ul>
+        </div>
+      </details>
+      <details><summary>속도 선택하기</summary>
+        <div class="details-content">
+          <ol>
+            <li><code>0</code>을 선택한 경우: DC모터가 움직이지 않습니다. 정지해있습니다.</li>
+            <li><code>0</code>보다 큰 수를 선택한 경우(<code>1</code>~<code>20</code>): DC모터가 회전합니다. 숫자가 클수록 빠르게 회전합니다.</li>
+            <li><code>0</code>보다 작은 수를 선택한 경우(<code>-1</code>~<code>-20</code>): DC모터가 회전하지만, 2번 경우와 반대 방향으로 회전합니다. 숫자가 클수록 빠르게 회전합니다.</li>
+          </ol>
+          모터 하나만 움직이고 싶다면 멈춰두고 싶은 모터의 속도를 <code>0</code>으로 설정합니다.
+        </div>
+      </details>
+      <details><summary>자동차 로봇을 움직이려 한다면</summary>
+        <div class="details-content">
+          M3, M4 포트에 연결할 DC모터를 바퀴로 쓸 예정이라면 이렇게 연결합니다.
+          <ul>
+            <li>왼쪽 바퀴: M3 포트 (해당 DC모터가 M1 포트에 연결된 DC모터랑 동일하게 동작한다면 M1포트에 연결하는 것을 추천)</li>
+            <li>오른쪽 바퀴: M4 포트 (해당 DC모터가 M2 포트에 연결된 DC모터랑 동일하게 동작한다면 M2포트에 연결하는 것을 추천)</li>
+          </ul>
+          속도는 이렇게 설정합니다.
+          <ul>
+            <li>전진: 두 바퀴의 속도가 같아야 합니다. <code>1</code>~<code>20</code> 중 하나를 입력합니다.</li>
+            <li>후진: 두 바퀴의 속도가 같아야 합니다. <code>-1</code>~<code>-20</code> 중 하나를 입력합니다.</li>
+            <li>좌회전: 왼쪽 바퀴의 속도가 오른쪽보다 느려야 합니다.</li>
+            <li>우회전: 오른쪽 바퀴의 속도가 왼쪽보다 느려야 합니다.</li>
+          </ul>
+          모터가 일정 시간 동작 후 알아서 멈추기 때문에 따로 정지시켜줄 필요가 없습니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">모터 M3, M4 (속도 설정)</h4>
+    <div class="content">
+      <img src="img/codingblock/motor-34-speed-pulldown.png" alt="">
+      <img src="img/codingblock/motor-34-speed.png" alt="">
+      <p>M3과 M4 포트에 연결된 DC모터가 선택한 속도로 회전합니다. 따로 속도를 바꾸어줄 때까지 계속 그 속도로 회전합니다.</p>
+      <details><summary>제어할 DC모터 선택하기</summary>
+        <div class="details-content">
+          <ul>
+            <li>M3 포트에 연결된 DC모터: 블록에서 <code>M3</code> 입력 상자에 들어가는 속도를 바꾸어 제어합니다.</li>
+            <li>M4 포트에 연결된 DC모터: 블록에서 <code>M4</code> 입력 상자에 들어가는 속도를 바꾸어 제어합니다.</li>
+          </ul>
+        </div>
+      </details>
+      <details><summary>속도 선택하기</summary>
+        <div class="details-content">
+          <ol>
+            <li><code>0</code>을 선택한 경우: DC모터가 움직이지 않습니다. 정지해있습니다.</li>
+            <li><code>0</code>보다 큰 수를 선택한 경우(<code>1</code>~<code>20</code>): DC모터가 회전합니다. 숫자가 클수록 빠르게 회전합니다.</li>
+            <li><code>0</code>보다 작은 수를 선택한 경우(<code>-1</code>~<code>-20</code>): DC모터가 회전하지만, 2번 경우와 반대 방향으로 회전합니다. 숫자가 클수록 빠르게 회전합니다.</li>
+          </ol>
+          모터 하나만 움직이고 싶다면 멈춰두고 싶은 모터의 속도를 <code>0</code>으로 설정합니다.
+        </div>
+      </details>
+      <details><summary>자동차 바퀴를 움직이려 한다면</summary>
+        <div class="details-content">
+          M3, M4 포트에 연결할 DC모터를 바퀴로 쓸 예정이라면 이렇게 연결합니다.
+          <ul>
+            <li>왼쪽 바퀴: M3 포트 (해당 DC모터가 M1 포트에 연결된 DC모터랑 동일하게 동작한다면 M1포트에 연결하는 것을 추천)</li>
+            <li>오른쪽 바퀴: M4 포트 (해당 DC모터가 M2 포트에 연결된 DC모터랑 동일하게 동작한다면 M2포트에 연결하는 것을 추천)</li>
+          </ul>
+          속도는 이렇게 설정합니다.
+          <ul>
+            <li>전진: 두 바퀴의 속도가 같아야 합니다. <code>1</code>~<code>20</code> 중 하나를 입력합니다.</li>
+            <li>후진: 두 바퀴의 속도가 같아야 합니다. <code>-1</code>~<code>-20</code> 중 하나를 입력합니다.</li>
+            <li>좌회전: 왼쪽 바퀴의 속도가 오른쪽보다 느려야 합니다.</li>
+            <li>우회전: 오른쪽 바퀴의 속도가 왼쪽보다 느려야 합니다.</li>
+            <li>정지: 두 바퀴의 속도를 <code>0</code>으로 설정해야 합니다.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+
+
+
+
+    <h2 class="chapter">4. 입력</h2>
+
+    <h3 class="chapter">블루투스 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li><code>참</code> 또는 <code>거짓</code> 값이 되어 '조건'으로 사용되곤 하는 '참/거짓' 블록이에요.</li>
+          <li>리모컨으로부터 받은 블루투스 신호를 확인할 때 사용합니다.</li>
+          <li>이 블록의 값을 보고 리모컨의 특정 버튼이 눌러졌는지 눌러지지 않았는지 확인할 수 있습니다.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>리모컨으로 로봇을 조종하고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+
+    <h4 class="chapter">블루투스 (1개)</h4>
+    <div class="content">
+      <img src="img/codingblock/input-bluetooth-1.png" alt="">
+      <p>선택한 블루투스 번호에 해당하는 리모컨 버튼의 상태를 확인합니다.</p>
+      <p>리모컨 버튼이 눌러져있다면 이 블록의 값이 <code>참</code>이 되고, 리모컨 버튼이 눌러지지 않았다면 블록 값이 <code>거짓</code>이 됩니다.</p>
+      <p>블록 값이 <code>참</code>인지 <code>거짓</code>인지를 보고 해당 리모컨 버튼의 상태를 알 수 있습니다.</p>
+      <details><summary>상태를 확인할 리모컨 버튼 선택하기</summary>
+        <div class="details-content">
+          <ul>
+            <li>리모컨 1번 버튼의 상태가 궁금하다면 입력상자에서 <code>BT1</code>을 선택합니다.</li>
+            <li>리모컨 2번 버튼의 상태가 궁금하다면 입력상자에서 <code>BT2</code>을 선택합니다.</li>
+            <li>...</li>
+            <li>리모컨 8번 버튼의 상태가 궁금하다면 입력상자에서 <code>BT8</code>을 선택합니다.</li>
+          </ul>
+        </div>
+      </details>
+      <p>다른 버튼이 눌러졌는지 눌러지지 않았는지와 상관 없이 특정 버튼의 상태에 따라 블록 값이 결정됩니다.</p>
+    </div>
+
+    <h4 class="chapter">블루투스 (2개)</h4>
+    <div class="content">
+      <img src="img/codingblock/input-bluetooth-1.png" alt="">
+      <p>선택한 블루투스 번호에 해당하는 리모컨 버튼들의 상태를 확인합니다.</p>
+      <p>선택한 블루투스 번호에 해당하는 리모컨 버튼들이 '모두' 눌러져있다면 블록 값이 <code>참</code>이 되고, 리모컨 버튼이 눌러지지 않았다면 블록 값이 <code>거짓</code>이 됩니다.</p>
+      <p>블록 값이 <code>참</code>인지 <code>거짓</code>인지를 보고 해당 리모컨 버튼의 상태를 알 수 있습니다.</p>
+      <details><summary>상태를 확인할 리모컨 버튼 선택하기</summary>
+        <div class="details-content">
+          <ul>
+            <li>리모컨 1번 버튼과 2번 버튼이 모두 눌러졌는지 알고 싶다면 입력상자에서 <code>BT1</code>과 <code>BT2</code>을 선택합니다.</li>
+            <li>리모컨 2번 버튼과 7번 버튼이 모두 눌러졌는지 알고 싶다면 입력상자에서 <code>BT2</code>과 <code>BT7</code>을 선택합니다.</li>
+            <li>...</li>
+          </ul>
+          <p>리모컨의 1번 버튼'만' 눌러졌는지 알고 싶다면 입력상자에서 <code>BT1</code>과 <code>0</code>을 선택합니다.</p>
+          <p>다른 버튼에 대해서도 마찬가지입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">블루투스 (4개)
+    </h4>
+    <div class="content">
+      <img src="img/codingblock/input-bluetooth-4.png" alt="">
+      <p>선택한 블루투스 번호에 해당하는 리모컨 버튼들의 상태를 확인합니다.</p>
+      <p>선택한 블루투스 번호에 해당하는 리모컨 버튼들이 '모두' 눌러져있다면 블록 값이 <code>참</code>이 되고, 리모컨 버튼이 눌러지지 않았다면 블록 값이 <code>거짓</code>이 됩니다.</p>
+      <p>블록 값이 <code>참</code>인지 <code>거짓</code>인지를 보고 해당 리모컨 버튼의 상태를 알 수 있습니다.</p>
+      <details><summary>상태를 확인할 리모컨 버튼 선택하기</summary>
+        <div class="details-content">
+          <ul>
+            <li>리모컨 1번, 2번, 3번, 4번 버튼이 모두 눌러졌는지 알고 싶다면 입력상자에서 <code>BT1</code>, <code>BT2</code>, <code>BT3</code>, <code>BT4</code>을 선택합니다.</li>
+            <li>리모컨 1번, 3번, 5번, 8번 버튼이 모두 눌러졌는지 알고 싶다면 입력상자에서 <code>BT1</code>, <code>BT3</code>, <code>BT5</code>, <code>BT8</code>을 선택합니다.</li>
+            <li>...</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+
+
+    <h3 class="chapter">X-키패드 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li><code>참</code> 또는 <code>거짓</code> 값이 되어 '조건'으로 사용되곤 하는 '참/거짓' 블록이에요.</li>
+          <li>X-키패드로부터 받은 아날로그 신호를 확인할 때 사용합니다.</li>
+          <li>이 블록의 값을 보고 X-키패드의 특정 버튼이 눌러졌는지 눌러지지 않았는지 확인할 수 있습니다.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>X-키패드로 로봇을 조종하고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+
+    <h4 class="chapter">X-키패드</h4>
+    <div class="content">
+      <img src="img/codingblock/input-xkeypad.png" alt="">
+      <p>선택한 번호에 해당하는 X-키패드 버튼의 상태를 확인합니다.</p>
+      <p>X-키패드 버튼이 눌러져있다면 이 블록의 값이 <code>참</code>이 되고, 리모컨 버튼이 눌러지지 않았다면 블록 값이 <code>거짓</code>이 됩니다.</p>
+      <p>블록 값이 <code>참</code>인지 <code>거짓</code>인지를 보고 해당 X-키패드 버튼의 상태를 알 수 있습니다.</p>
+      <details><summary>상태를 확인할 X-키패드 선택하기</summary>
+        <div class="details-content">
+          <code>IN1</code>~<code>IN4</code>을 선택하면 해당 IN포트에 연결된 X-키패드의 버튼 상태를 확인할 수 있습니다.
+        </div>
+      </details>
+      <details><summary>상태를 확인할 X-키패드 버튼 선택하기</summary>
+        <div class="details-content">
+          <ul>
+            <li>X-키패드 1번 버튼의 상태가 궁금하다면 입력상자에서 <code>B1</code>을 선택합니다.</li>
+            <li>X-키패드 2번 버튼의 상태가 궁금하다면 입력상자에서 <code>B2</code>을 선택합니다.</li>
+            <li>...</li>
+            <li>X-키패드 5번 버튼의 상태가 궁금하다면 입력상자에서 <code>BT5</code>을 선택합니다.</li>
+          </ul>
+        </div>
+      </details>
+      <p>버튼이 여러개 눌러진 경우, 버튼 상태가 제대로 확인되지 않습니다.</p>
+      <p>버튼이 딱 한개만 눌러져 있어야 합니다.</p>
+    </div>
+
+
+
+    <h3 class="chapter">접촉센서 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li><code>참</code> 또는 <code>거짓</code> 값이 되어 '조건'으로 사용되곤 하는 '참/거짓' 블록이에요.</li>
+          <li>접촉센서로부터 받은 아날로그 신호를 확인할 때 사용합니다.</li>
+          <li>이 블록의 값을 보고 접촉센서의 버튼이 눌러졌는지 눌러지지 않았는지 확인할 수 있습니다.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>접촉센서 버튼을 눌러 로봇을 조종하고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+
+    <h4 class="chapter">접촉센서</h4>
+    <div class="content">
+      <img src="img/codingblock/input-contact.png" alt="">
+      <p>선택한 접촉센서의 버튼 상태를 확인합니다.</p>
+      <p>접촉센서의 버튼이 눌러져있다면 이 블록의 값이 <code>참</code>이 되고, 리모컨 버튼이 눌러지지 않았다면 블록 값이 <code>거짓</code>이 됩니다.</p>
+      <p>블록 값이 <code>참</code>인지 <code>거짓</code>인지를 보고 해당 접촉센서 버튼의 상태를 알 수 있습니다.</p>
+      <details><summary>상태를 확인할 접촉센서 선택하기</summary>
+        <div class="details-content">
+          입력상자에서 <code>IN1</code>~<code>IN4</code>을 선택하면 해당 IN포트에 연결된 접촉센서의 버튼 상태를 확인할 수 있습니다.
+        </div>
+      </details>
+    </div>
+
+
+
+    <h3 class="chapter">적외선센서 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li><code>참</code> 또는 <code>거짓</code> 값이 되어 '조건'으로 사용되곤 하는 '참/거짓' 블록이에요.</li>
+          <li>적외선센서로부터 받은 아날로그 신호를 확인할 때 사용합니다.</li>
+          <li>이 블록의 값을 보고 근처에 장애물이 있는지 없는지 탐지할 수 있습니다.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>벽과 가까워지면 후진하는 자동차 로봇을 만들고 싶을 때</li>
+          <li>바닥에 그려진 까만 선을 따라가는 자동차 로봇을 만들고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+
+    <h4 class="chapter">적외선센서 (거리 이내)</h4>
+    <div class="content">
+      <img src="img/codingblock/input-infrared-inner.png" alt="">
+      <p>선택한 적외선센서에서 선택한 거리 이내에 장애물이 있는지 확인합니다.</p>
+      <p>적외선센서로부터 특정 거리 이내에 장애물이 있으면 이 블록의 값이 <code>참</code>이 되고, 장애물이 없다면 블록 값이 <code>거짓</code>이 됩니다.</p>
+      <p>블록 값이 <code>참</code>인지 <code>거짓</code>인지를 보고 장애물 유무를 알 수 있습니다.</p>
+      <details><summary>상태를 확인할 적외선센서 선택하기</summary>
+        <div class="details-content">
+          입력상자에서 <code>IN1</code>~<code>IN4</code>을 선택하면 해당 IN포트에 연결된 적외선센서에서 특정 거리 이내에 장애물이 있는지 없는지 확인할 수 있습니다.
+        </div>
+      </details>
+      <details><summary>거리 선택하기</summary>
+        <div class="details-content">
+          입력상자에서 <code>2cm</code>~<code>15cm</code> 중 하나를 선택하여 해당 거리 이내에 장애물이 있는지 없는지 확인할 수 있습니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">적외선센서 (거리 사이)</h4>
+    <div class="content">
+      <img src="img/codingblock/input-infrared-between.png" alt="">
+      <p>선택한 적외선센서에서 선택한 거리 사이에 장애물이 있는지 확인합니다.</p>
+      <p>적외선센서로부터 특정 거리 사이에 장애물이 있으면 이 블록의 값이 <code>참</code>이 되고, 장애물이 없다면 블록 값이 <code>거짓</code>이 됩니다.</p>
+      <p>블록 값이 <code>참</code>인지 <code>거짓</code>인지를 보고 장애물 유무를 알 수 있습니다.</p>
+      <details><summary>상태를 확인할 적외선센서 선택하기</summary>
+        <div class="details-content">
+          입력상자에서 <code>IN1</code>~<code>IN4</code>을 선택하면 해당 IN포트에 연결된 적외선센서에서 특정 거리 사이에 장애물이 있는지 없는지 확인할 수 있습니다.
+        </div>
+      </details>
+      <details><summary>거리 선택하기</summary>
+        <div class="details-content">
+          <p>첫번째 입력상자와 두번째 입력상자에 <code>0cm</code> 또는 <code>2cm</code>~<code>15cm</code> 중 하나를 차례대로 선택합니다.</p>
+          <p>두 거리 사이에 장애물이 있는지 확인할 수 있습니다.</p>
+        </div>
+      </details>
+    </div>
+
+
+
+
+    <h2 class="chapter">5. 제어</h2>
+
+    <h3 class="chapter">기다리기 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>코드를 실행하다가 몇 초 동안 쉬면서 기다리고 싶을 때 사용하는 블록이에요.</li>
+          <li>원하는 입력이 들어올 때까지 쉬면서 기다릴 때 사용하는 블록이에요.</li>
+          <li>제어 블록에는 '반복문 블록'과 '조건문 블록'이 있는데, 기다리기 블록과 반복하기 블록은 반복분 블록이에요.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>LED를 켰다가 3초 후에 끄고 싶을 때</li>
+          <li>서보모터 집게발을 벌렸다가 5초 후에 닫고 싶을 때</li>
+          <li>X-키패드 1번 버튼이 눌릴 때까지 아무 일도 안 하고 기다리고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+    
+    <h4 class="chapter">시간만큼 기다리기</h4>
+    <div class="content">
+      <img src="img/codingblock/control-wait-time.png" alt="">
+      <p>이 블록은 입력된 시간만큼 기다리다가 다음 블록을 실행합니다.</p>
+      <p>블록을 실행하는 동안 CPU는 기다리면서 입력한 시간이 지났는지 지나지 않았는지 계속 확인합니다. (&#39;시간만큼 기다리기&#39; 블록이 &#39;반복문&#39;인 이유입니다.)</p>
+      <details><summary>기다릴 시간 입력하기</summary>
+        <div class="details-content">
+          입력상자에 기다리고 싶은 시간을 '초' 단위로 입력합니다. 예를 들어 <code>1</code>을 입력하면 1초 동안 기다리게 됩니다.
+        </div>
+      </details>
+      <details><summary>사용 예시: LED 3초 동안 켰다가 끄기</summary>
+        <div class="details-content">
+          <img src="img/codingblock/control-wait-time/ex1.png" alt="">
+          LED를 켜는 데는 0.0001초도 걸리지 않기 때문에, LED를 켰다가 바로 끄게 되면 우리 눈에는 LED가 켜진 적이 없는 것처럼 보입니다. 사실 그 짧은 시간 동안 LED는 켜졌다가 꺼졌지만요.
+          그래서 LED를 1초 동안 켜고 싶을 땐 LED를 켜고, 1초 동안 기다리고, 다시 LED를 꺼주어야 합니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">참일 때까지 기다리기</h4>
+    <div class="content">
+      <img src="img/codingblock/control-wait-until.png" alt="">
+      <p>이 블록은 입력된 '조건(참/거짓 블록. 주로 '입력' 블록)'이 충족될 때까지 기다리다가 다음 블록을 실행합니다.</p>
+      <p>특정 버튼을 누르거나, 센서로 특정 신호가 들어올 때까지 기다릴 경우 사용합니다.</p>
+      <p>블록을 실행하는 동안 CPU는 기다리면서 입력한 조건이 충족됐는지 아닌지 계속 확인합니다. (&#39;참일 때까지 기다리기&#39; 블록이 &#39;반복문&#39;인 이유입니다.)</p>
+      <details><summary>기다릴 조건 입력하기</summary>
+        <div class="details-content">
+          입력상자에 <code>참</code>이나 <code>거짓</code>이 되는 <code>참/거짓</code> 블록을 넣습니다.
+          특정 버튼을 누르거나, 센서로 특정 신호가 들어올 때까지 기다릴 경우 사용하기 때문에 입력 블록과 함께 사용되는 경우가 많습니다.
+          <code>참/거짓</code> 연산 블록과도 함께 쓰이곤 합니다.
+        </div>
+      </details>
+    </div>
+
+
+
+
+    <h3 class="chapter">반복하기 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>코드를 실행하다가 몇 초 동안 쉬면서 기다리고 싶을 때 사용하는 블록이에요.</li>
+          <li>원하는 입력이 들어올 때까지 쉬면서 기다릴 때 사용하는 블록이에요.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>LED를 켰다 끄는 것, 서보모터 집게발을 벌렸다가 닫는 것을 여러번 반복하고 싶을 때</li>
+          <li>리모컨, X-키패드, 센서 등 입력 하드웨어를 사용하여 입력을 반복적으로 받고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+
+    <h4 class="chapter">계속 반복하기</h4>
+    <div class="content">
+      <img src="img/codingblock/control-repeat.png" alt="">
+      <p>이 블록은 팔 안쪽 블록들을 영원히 반복합니다. (&#39;계속 반복하기&#39; 블록은 이름만 봐도 알 수 있듯 &#39;반복문&#39;입니다.)</p>
+      <p>팔 안쪽의 블록들도 다른 블록들과 마찬가지로 '위에서 아래로' 차례차례 실행됩니다.</p>
+      <p>반복이 절대 끝나지 않기 때문에 로봇 실행이 끝날 때까지 입력 하드웨어로부터 입력을 받아야 할 경우(리모컨, X-키패드, 센서 사용 시) 사용됩니다.</p>
+    </div>
+
+    <h4 class="chapter">횟수만큼 반복하기</h4>
+    <div class="content">
+      <img src="img/codingblock/control-repeat-time.png" alt="">
+      <p>이 블록은 입력된 횟수만큼 팔 안쪽 블록들을 반복합니다. (&#39;횟수만큼 반복하기&#39; 블록은 이름만 봐도 알 수 있듯 &#39;반복문&#39;입니다.)</p>
+      <p>팔 안쪽의 블록들도 다른 블록들과 마찬가지로 '위에서 아래로' 차례차례 실행됩니다.</p>
+      <p>반복이 끝난 뒤에 횟수만큼 반복하기 블록 아래에 연결된 블록이 실행됩니다.</p>
+      <details><summary>반복할 횟수 입력하기</summary>
+        <div class="details-content">
+          입력상자에 반복할 횟수를 입력합니다. 예를 들어 <code>3</code>을 입력하면 팔 안쪽 블록이 3번 반복됩니다. <code>4.7</code> 같은 숫자는 안 됩니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">참일 때까지 반복하기</h4>
+    <div class="content">
+      <img src="img/codingblock/control-repeat-until.png" alt="">
+      <p>이 블록은 입력된 '조건(참/거짓 블록. 주로 '입력' 블록)'이 충족될 때까지 팔 안쪽 블록들을 반복하다가 다음 블록을 실행합니다. (&#39;참일 때가지 반복하기&#39; 블록은 이름만 봐도 알 수 있듯 &#39;반복문&#39;입니다.)</p>
+      <p>특정 버튼을 누르거나, 센서로 특정 신호가 들어올 때까지 어떠한 작업을 반복해야 하는 경우 사용합니다.</p>
+      <p>팔 안쪽의 블록들도 다른 블록들과 마찬가지로 '위에서 아래로' 차례차례 실행됩니다.</p>
+      <p>반복이 끝난 뒤에 참일 때까지 반복하기 블록 아래에 연결된 블록이 실행됩니다.</p>
+      <details><summary>반복할 조건 입력하기</summary>
+        <div class="details-content">
+          입력상자에 <code>참</code>이나 <code>거짓</code>이 되는 <code>참/거짓</code> 블록을 넣습니다.
+          특정 버튼을 누르거나, 센서로 특정 신호가 들어올 때까지 특정 작업을 반복해야 하기 때문에 입력 블록과 함께 사용되는 경우가 많습니다.
+          <code>참/거짓</code> 연산 블록과도 함께 쓰이곤 합니다.
+        </div>
+      </details>
+    </div>
+    
+
+
+    <h3 class="chapter">만약 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>'조건'에 따라 특정 블록을 실행하거나, 실행하지 않고 점프하고 싶을 때 사용하는 블록이에요.</li>
+          <li>경우에 따라 실행하고 싶은 코드가 다를 때도 만약 블록을 사용합니다.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>리모컨 1번 버튼을 누르면 DC모터를 5초간 회전시켜 풍차 날개가 돌아가도록 하고 싶을 때</li>
+          <li>X-키패드 3번 버튼을 눌러 서보모터 집게발을 열고 4번 버튼을 눌러 집베발을 닫도록 만들고 싶을 때</li>
+          <li>적외선센서로부터 3cm 이내에 장애물이 있으면 LED가 켜지고, 없으면 끄고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+    
+    <h4 class="chapter">만약</h4>
+    <div class="content">
+      <img src="img/codingblock/control-if.png" alt="">
+      <p>입력된 '조건(참/거짓 블록. 주로 '입력' 블록)'이 충족되면 팔 안쪽 블록들을 실행합니다. (조건에 따라 블록을 실행하므로 '조건문'입니다.)</p>
+      <p>팔 안쪽의 블록들도 다른 블록들과 마찬가지로 '위에서 아래로' 차례차례 실행됩니다.</p>
+      <p>실행이 끝난 뒤에 블록 아래에 연결된 블록이 실행됩니다.</p>
+      <p>특정 버튼을 누르거나, 센서로 특정 신호가 들어올 때 특정 작업을 하고 싶은 경우 사용합니다.</p>
+      <details><summary>조건 입력하기</summary>
+        <div class="details-content">
+          입력상자에 <code>참</code>이나 <code>거짓</code>이 되는 <code>참/거짓</code> 블록을 넣습니다.
+          특정 버튼을 누르거나, 센서로 특정 신호가 들어오는 것에 따라 다른 코드를 실행해야 하기 때문에 입력 블록과 함께 사용되는 경우가 많습니다.
+          <code>참/거짓</code> 연산 블록과도 함께 쓰이곤 합니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">만약-아니면</h4>
+    <div class="content">
+      <img src="img/codingblock//control-ifelse.png" alt="">
+      <p>입력된 '조건(참/거짓 블록. 주로 '입력' 블록)'이 충족되면 '만약' 팔 안의 블록을 실행하고, 충족되지 않은 경우 '아니면' 팔 안의 블록을 실행합니다. (조건에 따라 블록을 실행하므로 '조건문'입니다.)</p>
+      <p>팔 안쪽의 블록들도 다른 블록들과 마찬가지로 '위에서 아래로' 차례차례 실행됩니다.</p>
+      <p>실행이 끝난 뒤에 블록 아래에 연결된 블록이 실행됩니다.</p>
+      <p>'만약'뿐 아니라 조건이 충족되지 않은 경우에도 특정 작업을 하고 싶을 때 사용합니다.</p>
+      <details><summary>조건 입력하기</summary>
+        <div class="details-content">
+          입력상자에 <code>참</code>이나 <code>거짓</code>이 되는 <code>참/거짓</code> 블록을 넣습니다.
+          특정 버튼을 누르거나, 센서로 특정 신호가 들어오는 것에 따라 다른 코드를 실행해야 하기 때문에 입력 블록과 함께 사용되는 경우가 많습니다.
+          <code>참/거짓</code> 연산 블록과도 함께 쓰이곤 합니다.
+        </div>
+      </details>
+    </div>
+
+
+
+
+    <h2 class="chapter">6. 연산</h2>
+
+    <h3 class="chapter">논리 연산 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li><code>참/거짓</code> 블록(입력 블록 또는 연산 블록)을 연결하여 여러 조건을 조합하고 싶을 때 사용하는 블록이에요.</li>
+          <li>'두 조건을 모두 만족하기', '두 조건 중 하나라도 만족하기', '조건을 만족하지 않기' 등의 경우를 만들 수 있습니다.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>두 개의 X-키패드를 조합해서(버튼을 동시에 눌러서) 사용하고 싶을 때</li>
+          <li>장애물이 적외선센서로부터 5cm 이내에 있는 경우에만 리모컨 버튼을 눌렀을 때 서보모터 집게발이 움직이길 원할 때</li>
+          <li>두 개의 접촉센서 중 하나라도 눌러지면 LED가 켜고 싶을 때</li>
+          <li>장애물이 적외선센서로부터 5cm 이상 떨어져있을 때만 DC모터를 회전시키고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+    
+    <h4 class="chapter">그리고</h4>
+    <div class="content">
+      <img src="img/codingblock/operator-and.png" alt="">
+      <p>입력된 두 조건(참/거짓 블록. 주로 '입력' 블록)을 '모두' 만족하는 경우에만 <code>참</code>이 됩니다.</p>
+      <p>조건을 '모두' 만족하는 경우를 만들고 싶을 때 사용합니다.</p>
+      <details><summary>조건 입력하기</summary>
+        <div class="details-content">
+          두 입력상자에 <code>참/거짓</code> 블록을 넣습니다.
+          주로 버튼을 동시에 누르거나, 센서로 여러 신호가 동시에 들어오는 경우를 만들고 싶을 때가 대부분이기에 입력 블록과 함께 사용되는 경우가 많습니다.
+          <code>참/거짓</code> 연산 블록과도 함께 쓰이곤 합니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">또는</h4>
+    <div class="content">
+      <img src="img/codingblock/operator-or.png" alt="">
+      <p>입력된 두 조건(참/거짓 블록. 주로 '입력' 블록) 중 하나라도 만족하는 경우에만 <code>참</code>이 됩니다.</p>
+      <p>조건을 '둘 중 하나라도' 만족하는 경우를 만들고 싶을 때 사용합니다.</p>
+      <details><summary>조건 입력하기</summary>
+        <div class="details-content">
+          두 입력상자에 <code>참/거짓</code> 블록을 넣습니다.
+          주로 여러 버튼 중 하나라도 눌리거나, 센서에 여러 신호 중 하나라도 들어오는 경우를 만들고 싶을 때가 대부분이기에 입력 블록과 함께 사용되는 경우가 많습니다.
+          <code>참/거짓</code> 연산 블록과도 함께 쓰이곤 합니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">부정</h4>
+    <div class="content">
+      <img src="img/codingblock/operator-not.png" alt="">
+      <p>입력된 조건(참/거짓 블록. 주로 '입력' 블록)의 반대 경우에만 <code>참</code>이 됩니다.</p>
+      <p>조건의 반대 경우를 만들고 싶을 때 사용합니다.</p>
+      <details><summary>조건 입력하기</summary>
+        <div class="details-content">
+          입력상자에 <code>참/거짓</code> 블록을 넣습니다.
+          특정 버튼이 눌리지 않거나, 센서 신호가 들어오지 않는 경우, 특정 센서 신호가 아닌 다른 신호가 들어오는 경우를 만들고 싶을 때가 대부분이기에 입력 블록과 함께 사용되는 경우가 많습니다.
+          <code>참/거짓</code> 연산 블록과도 함께 쓰이곤 합니다.
+        </div>
+      </details>
+    </div>
+
+
+
+    <h3 class="chapter">크기 비교 연산 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>두 수의 크기를 비교하여 그 결과를 <code>참</code> 또는 <code>거짓</code>으로 알려주는 블록이에요.</li>
+          <li>수를 직접 입력할 수도 있지만, 주로 수와 관련 있는 랜덤 블록과 함께 사용됩니다.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>랜덤 수가 1이면 서보모터를 움직여 히포 로봇의 입을 닫게 하고 싶을 때</li>
+          <li>랜덤 수가 3보다 클 때만 LED를 켜고 싶을 때</li>
+          <li>랜덤 수가 3보다 작을 때만 DC모터를 움직이고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+    
+    <h4 class="chapter">같다</h4>
+    <div class="content">
+      <img src="img/codingblock/operator-equal.png" alt="">
+      <p>입력된 두 수가 같은지 확인합니다.</p>
+      <p>두 수가 같으면 <code>참</code>이 되고, 다르면 <code>거짓</code>이 됩니다.</p>
+      <p>두 수의 크기가 같은지 다른지에 따라 하고 싶은 작업이 달라지는 경우가 많아 주로 '만약' 또는 '만약-아니면' 블록과 함께 사용됩니다.</p>
+      <details><summary>수 입력하기</summary>
+        <div class="details-content">
+          입력상자에 수를 직접 입력하거나, 랜덤 블록을 넣거나, 변수 블록을 넣습니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">크다</h4>
+    <div class="content">
+      <img src="img/codingblock/operator-gt.png" alt="">
+      <p>입력된 두 수 중 왼쪽이 큰지 확인합니다.</p>
+      <p>왼쪽 수가 크면 <code>참</code>이 되고, 작으면 <code>거짓</code>이 됩니다.</p>
+      <p>왼쪽 수가 더 큰지에 따라 하고 싶은 작업이 달라지는 경우가 많아 주로 '만약' 또는 '만약-아니면' 블록과 함께 사용됩니다.</p>
+      <details><summary>수 입력하기</summary>
+        <div class="details-content">
+          입력상자에 수를 직접 입력하거나, 랜덤 블록을 넣거나, 변수 블록을 넣습니다.
+        </div>
+      </details>
+    </div>
+
+    <h4 class="chapter">작다</h4>
+    <div class="content">
+      <img src="img/codingblock/operator-lt.png" alt="">
+      <p>입력된 두 수 중 왼쪽이 작은지 확인합니다.</p>
+      <p>왼쪽 수가 작으면 <code>참</code>이 되고, 크면 <code>거짓</code>이 됩니다.</p>
+      <p>왼쪽 수가 더 작은지에 따라 하고 싶은 작업이 달라지는 경우가 많아 주로 '만약' 또는 '만약-아니면' 블록과 함께 사용됩니다.</p>
+      <details><summary>수 입력하기</summary>
+        <div class="details-content">
+          입력상자에 수를 직접 입력하거나, 랜덤 블록을 넣거나, 변수 블록을 넣습니다.
+        </div>
+      </details>
+    </div>
+
+
+
+    <h3 class="chapter">랜덤 블록</h3>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이런 블록이에요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>랜덤한 수를 하나 골라줍니다.</li>
+          <li>주로 수와 관련 있는 '크기 비교 연산 블록'과 함께 사용됩니다.</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="callout-title">✔️ 이럴 때 사용해요</div>
+      <div class="callout-content">
+        <ul class="callout-list">
+          <li>랜덤 수가 1이면 서보모터를 움직여 히포 로봇의 입을 닫게 하고 싶을 때</li>
+          <li>랜덤 수가 3보다 클 때만 LED를 켜고 싶을 때</li>
+          <li>랜덤 수가 3보다 작을 때만 DC모터를 움직이고 싶을 때</li>
+        </ul>
+      </div>
+    </aside>
+
+    <h4 class="chapter">랜덤 수</h4>
+    <div class="content">
+      <img src="img/codingblock/operator-random.png" alt="">
+      <p>입력된 두 수 사이의 수 중 하나가 무작위로 골라집니다.</p>
+      <details><summary>수 범위 입력하기</summary>
+        <div class="details-content">
+          두 입력상자에 각각 수를 입력합니다.
+          왼쪽에 들어가는 수가 오른쪽에 들어가는 수보다 작아야 합니다.
+          입력상자에 들어가는 수를 포함하여 그 범위 내의 수가 무작위로 골라집니다. (수마다 확률은 같습니다.)
+        </div>
+      </details>
+    </div>
+
+
+
+  </div>
+
+<script src="src/script.js"></script>
+
+</body>
+</html>

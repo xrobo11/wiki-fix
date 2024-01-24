@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+body {
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(39, 39, 39);
+    position: fixed; /* 고정 위치 스타일 추가 */
+    top: 0;          /* 상단에 붙이기 위한 스타일 */
+    left: 0;         /* 좌측에 붙이기 위한 스타일 */
+    width: 100%;     /* 전체 너비를 차지하도록 설정 */
+    z-index: 1000;   /* 다른 요소 위에 나타나도록 z-index 설정 */
+}
+
+#title-logo {
+    background-color: black;
+    float: center;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
+}
+
+#toc-open {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    size: 50px;
+    text-decoration: none;
+}
+
+#toc-div {
+    float: left;
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px 14px 0px;
+    size: 50px;
+    text-decoration: none;
+}
+
+#toc-now {
+    float: center;
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    size: 50px;
+    text-decoration: none;
+}
+
+#search {
+    float: right;
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    size: 50px;
+    text-decoration: none;
+}
+
+
+#toc {
+    background-color: rgb(247, 247, 247);
+    list-style-type: none;
+    padding: 0 0 0 10px;
+    position: fixed;
+    top: 0;
+    left: -300px; /* 초기에 왼쪽으로 숨김 */
+    height: 100%;
+    width: 250px; /* 원하는 너비 설정 */
+    transition: left 0.1s ease-out; /* 애니메이션 효과 추가 */
+    overflow-y: scroll;
+    z-index: 1000;
+}
+
+#toc-close {
+    padding: 1rem 0rem;
+}
+
+#toc li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+#toc li:hover {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+#toc li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.level-H1 {
+    font-size: large;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: black;
+}
+
+.level-H2 {
+    font-size: large;
+    margin-top: 2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.level-H3 {
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+    font-weight: bold;
+    color: rgb(70, 70, 70);
+}
+
+.level-H4 {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+    color: rgb(151, 151, 151);
+}
+
+/* 메뉴가 활성화 될 때 적용될 스타일 */
+#toc.active {
+    left: 0; /* 메뉴 보이게 */
+}
+
+.markdown-body {
+    position: relative;
+    left: 0;
+    width: 350px;
+    padding: 0% 5% 5% 5%;
+    transition: left 0.1s ease-out; /* 애니메이션 효과 추가 */
+}
+
+h4 {
+    padding-left: 1rem;
+    font-size: 1.1em !important;
+}
+
+.content {
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+span {
+    background: rgba(251, 243, 219, 1);
+}
+
+
+
+.callout {
+    border-radius: 3px;
+    border: 1px solid rgba(55, 53, 47, 0.16);
+    background-color: transparent;
+    padding: 16px 16px 16px 12px;
+    margin-bottom: 16px;
+    color: rgb(55, 53, 47);
+}
+
+.key-concept{
+    background-color: rgba(251, 243, 219, 1);
+}
+
+.callout-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.callout-content > ul {
+    margin: 0 !important;
+    
+}
+
+.callout-content > ol {
+    margin: 0 !important;
+    
+}
+
+
+.callout-list li {
+    margin: 0 0 0 0.5rem !important;
+}
+
+.callout-list details {
+    margin: 0 0 0 0.5rem !important;
+}
+
+summary {
+    display: inline;
+    margin-top: 4px;
+}
+
+.details-content {
+    padding-left: 1rem;
+}
